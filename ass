@@ -1,0 +1,6 @@
+from machine import Pin as pin
+from utime import sleep as pause, sleep_ms as pausem, sleep_us as pauseu
+led1=pin(12, pin.OUT)
+boton1=pin(13, pin.IN, pin.PULL_UP)
+while True:
+    led1.value(boton1.value())
